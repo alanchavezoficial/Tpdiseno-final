@@ -1,0 +1,436 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 50px;
+    font-size: 15px;
+}
+
+body {
+    background-color: #b3b3b3;
+    font-family: "Radio Canada", sans-serif; } .center-content { display: flex;
+    align-items: center;
+}
+
+
+header {
+    background-color: #1a1a1a;
+    height: 90dvh;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+#slider2_container {
+    transform: translateX(-50%);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #1a1a1a;
+    height: 50px;
+}
+
+nav svg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+nav svg path {
+    fill: white;
+}
+
+nav ul {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul a:hover li {
+    background-color: #333333;
+    transition: 0.2s;
+}
+
+nav ul a li {
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 15px;
+    padding: 17px;
+    height: 50px;
+    margin: 0px 5px;
+    text-transform: capitalize;
+    font-family: "Radio Canada", sans-serif; } section { background-color: #e6e6e6;
+    height: calc(100dvh - 50px);
+    padding: 12px 13px;
+    scroll-snap-align: start;
+}
+
+article h1 {
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-family: "Anaheim", sans-serif; display: flex; align-items: center; justify-content: center; }
+
+article {
+    float: left;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: black;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.197);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.741);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.422);
+}
+
+#info {
+    text-align: center;
+    padding: 20px 10px;
+    width: 95%;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1a1a1a #e6e6e6;
+}
+
+article:nth-child(2) {
+    width: 30%;
+    padding: 0 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+article:nth-child(2) div {
+    overflow: hidden;
+}
+
+article:nth-child(2) div img {
+    width: 100%;
+    height: 100%;
+}
+
+article p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+button {
+    background-color: #0088FF;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #333333;
+}
+
+button>span {
+    font-weight: 600;
+}
+
+#contenedor {
+    width: 80%;
+    padding: 20px;
+    align-items: center;
+    margin: auto;
+    overflow: auto;
+    height: 100%;
+}
+
+
+
+#contenedor h1 {
+    text-align: center;
+    padding: 20px;
+    font-family: "Anaheim", sans-serif; } #contenedor h2 { font-size: 30px;
+    font-family: "Anaheim", sans-serif; } #tabs { max-width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+#tabs .ui-tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 24px;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    background: rgba(118, 118, 128, 0.12);
+}
+
+#tabs .ui-tabs-nav li {
+    float: none;
+    margin: 0;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+}
+
+#tabs .ui-tabs-nav li a {
+    display: block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    color: #1d1d1f;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#tabs .ui-tabs-nav li a:hover {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+#tabs .ui-tabs-nav li.ui-tabs-active {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+#tabs .ui-tabs-nav li.ui-tabs-active a {
+    color: #1d1d1f;
+    cursor: default;
+}
+
+#tabs .ui-tabs-panel {
+    max-width: 760px;
+    min-height: 170px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    border: 0;
+    background: transparent;
+    color: #424245;
+    text-align: center;
+}
+
+#contenedor.product-container {
+    width: 96%;
+}
+
+.product-container #tabs {
+    max-width: none;
+}
+
+.product-container #tabs .ui-tabs-panel {
+    max-width: none;
+    min-height: 0;
+    padding: 24px clamp(12px, 3vw, 40px);
+}
+
+.product-container #tabs .ui-tabs-panel h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.product-container .tab-cont-gen {
+    min-height: 48vh;
+    gap: 24px;
+}
+
+.product-container .tab-cont-gen-img img {
+    width: 100%;
+    max-width: 460px;
+    max-height: 52vh;
+    object-fit: contain;
+}
+
+.product-container .tab-cont-gen-info {
+    align-self: center;
+}
+
+.product-container .tab-cont-gen-info>h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.product-container .tab-cont-gen-info>ul {
+    margin: 12px 0 20px;
+    padding-left: 20px;
+}
+
+.product-container .tab-cont-gen-info>ul>li {
+    margin: 9px 0;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+footer {
+    scroll-snap-align: start;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+footer > #name{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > #redes{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+footer > #redes > ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer > #redes > ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; 
+}
+
+footer > #redes > ul > li > a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+footer > #redes > ul > li > a > .logo > img{
+    filter: brightness(0) invert(1);
+    height: 20px;
+    width: 20px;    
+}
+
+#contenedor.contact-form-container {
+    max-width: 900px;
+}
+
+#contenedor.contact-form-container h2 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#contenedor.contact-form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px 2%;
+    width: 100%;
+}
+
+#contenedor.contact-form-container form>div {
+    width: 49%;
+}
+
+#contenedor.contact-form-container form>div:nth-child(3),
+#contenedor.contact-form-container form>div:nth-child(4) {
+    width: 100%;
+}
+
+#contenedor.contact-form-container form label {
+    display: block;
+    width: 100%;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+#contenedor.contact-form-container form input,
+#contenedor.contact-form-container form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 8px;
+    background-color: white;
+    color: #1a1a1a;
+    font-size: 15px;
+}
+
+#contenedor.contact-form-container form input {
+    height: 42px;
+}
+
+#contenedor.contact-form-container form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#contenedor.contact-form-container form input:focus,
+#contenedor.contact-form-container form textarea:focus {
+    outline: 2px solid #0088ff;
+    outline-offset: 1px;
+}
+
+#contenedor.contact-form-container form button {
+    margin: 4px auto 0;
+}
+
+header {
+    background: linear-gradient(135deg, #101014 0%, #273448 55%, #58677d 100%);
+}
+
+button {
+    background: linear-gradient(135deg, #0088ff 0%, #5b55d9 100%);
+    box-shadow: 0 5px 14px rgba(0, 75, 180, 0.25);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #006ed0 0%, #403bb5 100%);
+}
+
+article h1,
+#contenedor h1,
+#contenedor h2 {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+}
